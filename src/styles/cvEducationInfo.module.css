@@ -1,0 +1,52 @@
+.container {
+  padding: 10px;
+  /* border: solid black; */
+}
+
+.header {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.seperatorLine {
+  margin: 0px;
+  padding: 0px;
+  height: 1px;
+  border-bottom: 1px solid black;
+}
+
+.experienceContainer {
+  padding: 0px;
+  margin-bottom: 0px;
+  /* border: solid black; */
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  /* border: solid black; */
+  height: 45px;
+}
+
+.educationHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  /* border: solid black; */
+  padding-top: 0px;
+  margin-top: -20px;
+  height: 45px;
+}
+
+.company_title {
+  /* border: solid black; */
+  display: flex;
+  white-space: nowrap;
+}
+
+.position_date {
+  font-weight: normal;
+}
