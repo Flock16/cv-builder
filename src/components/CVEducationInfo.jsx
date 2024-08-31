@@ -1,4 +1,4 @@
-import classes from "../styles/CVEducationInfo.module.css";
+import classes from "../styles/cvEducationInfo.module.css";
 // import { v4 as uuidv4 } from "uuid";
 import { formatDate } from "../utils/dateFormatFunction";
 
