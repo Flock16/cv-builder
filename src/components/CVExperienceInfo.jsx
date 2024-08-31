@@ -1,4 +1,4 @@
-import classes from "../styles/CVExperienceInfo.module.css";
+import classes from "../styles/cvExperienceInfo.module.css";
 import { formatDate } from "../utils/dateFormatFunction";
 const CVExperienceInfo = ({ experienceInfo }) => {
   return (
