@@ -9,6 +9,9 @@ const ExperienceDetails = ({
   handleExperienceIsCurrentChange,
   handleAddExperience,
   handleDeleteExperience,
+  handleUpdateResponsibilityInput,
+  handleAddResponsibility,
+  handleDeleteResponsibility,
 }) => {
   const [dropDown, setDropDown] = useState(false);
   // console.log(experienceInfo);
@@ -73,9 +76,62 @@ const ExperienceDetails = ({
                   />
                   <div className={classes.companyHeader}>
                     <p>Responsibilities</p>
-                    <p>⮟</p>
                   </div>
-                  <input className={classes.mainInputs} />
+                  {experience.responsibilities.map((responsibility) => {
+                    return (
+                      <div
+                        key={responsibility.id}
+                        className={classes.responsibilitiesDiv}
+                      >
+                        <input
+                          value={responsibility.responsibility}
+                          className={classes.responsibilitiesInput}
+                          onChange={(event) => {
+                            handleUpdateResponsibilityInput(
+                              experience.id,
+                              event.target.value
+                            );
+                          }}
+                        />
+                        <button
+                          className={classes.deleteButtonResponsibilities}
+                          onClick={() => {
+                            handleDeleteResponsibility(
+                              experience.id,
+                              responsibility.id
+                            );
+                          }}
+                        >
+                          x
+                        </button>
+                      </div>
+                    );
+                  })}
+                  <div className={classes.responsibilitiesDiv}>
+                    <input
+                      value={experience.resonsibilityInput}
+                      placeholder="Add New Responsibility"
+                      className={classes.responsibilitiesInput}
+                      onChange={(event) => {
+                        handleUpdateResponsibilityInput(
+                          experience.id,
+                          event.target.value
+                        );
+                      }}
+                    />
+                    <button
+                      className={classes.addButtonResponsibilities}
+                      onClick={() => {
+                        if (experience.resonsibilityInput !== "") {
+                          handleAddResponsibility(experience.id);
+                          handleUpdateResponsibilityInput(experience.id, "");
+                        }
+                      }}
+                    >
+                      &#x2b;
+                    </button>
+                  </div>
+
                   <div className={classes.activeDate}>
                     <p>Start Date</p>
                     <div>

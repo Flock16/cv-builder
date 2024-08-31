@@ -58,6 +58,7 @@ p {
   padding-left: 20px;
   font-size: 14px;
   margin-bottom: 8px;
+  border: 2px solid black;
 }
 
 .activeDate {
@@ -106,6 +107,67 @@ p {
   background-color: lightgray;
 }
 
+.responsibilitiesDiv {
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+
+  width: 370px;
+  height: 35px;
+  border-radius: 20px;
+
+  margin-left: 20px;
+  /* padding-left: 20px; */
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.responsibilitiesInput {
+  width: 290px;
+  height: 30px;
+  border-radius: 20px;
+  /* margin-left: 20px; */
+  padding-left: 20px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  /* margin-bottom: 8px; */
+  /* border: 2px solid black; */
+}
+
+.responsibilitiesInput:focus {
+  outline: none;
+}
+
+.addButtonResponsibilities {
+  position: absolute;
+  background-color: #4ac0ff;
+  border: none;
+  border-radius: 30px;
+  height: 35px;
+  width: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 320px;
+}
+.addButtonResponsibilities:hover {
+  background-color: lightgray;
+}
+.deleteButtonResponsibilities {
+  position: absolute;
+  background-color: red;
+  border: none;
+  border-radius: 30px;
+  height: 35px;
+  width: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 320px;
+}
+.deleteButtonResponsibilities:hover {
+  background-color: lightgray;
+}
+
 .deleteButtonDiv {
   display: flex;
   justify-content: end;
@@ -117,7 +179,7 @@ p {
   border-radius: 30px;
   height: 25px;
   width: 25px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
 }
 .deleteButton:hover {

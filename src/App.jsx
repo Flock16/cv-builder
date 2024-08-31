@@ -10,6 +10,8 @@ import {
 import {
   createDefaultEducationObject,
   createDefaultExperienceObject,
+  createResponsibility,
+  deleteResponsibility,
 } from "./utils/createDefaultData.js";
 
 function App() {
@@ -56,6 +58,38 @@ function App() {
     setExperienceInfo(
       experienceInfo.filter((experience) => {
         return experience.id !== id;
+      })
+    );
+  };
+
+  const handleUpdateResponsibilityInput = (id, value) => {
+    setExperienceInfo(
+      experienceInfo.map((experience) => {
+        // console.log(experience.resonsibilityInput);
+        return experience.id === id
+          ? { ...experience, resonsibilityInput: value }
+          : experience;
+      })
+    );
+  };
+
+  const handleAddResponsibility = (id) => {
+    setExperienceInfo(
+      experienceInfo.map((experience) => {
+        // console.log(experience.responsibilities);
+        if (experience.id === id) {
+          return createResponsibility(experience);
+        } else return experience;
+      })
+    );
+  };
+
+  const handleDeleteResponsibility = (id, responsibilityID) => {
+    setExperienceInfo(
+      experienceInfo.map((experience) => {
+        if (experience.id === id) {
+          return deleteResponsibility(experience, responsibilityID);
+        } else return experience;
       })
     );
   };
@@ -113,6 +147,9 @@ function App() {
         handleExperienceIsCurrentChange={handleExperienceIsCurrentChange}
         handleAddExperience={handleAddExperience}
         handleDeleteExperience={handleDeleteExperience}
+        handleUpdateResponsibilityInput={handleUpdateResponsibilityInput}
+        handleAddResponsibility={handleAddResponsibility}
+        handleDeleteResponsibility={handleDeleteResponsibility}
         educationInfo={educationInfo}
         handleEducationChange={handleEducationChange}
         handleEducationIsActiveChange={handleEducationIsActiveChange}

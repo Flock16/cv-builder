@@ -12,9 +12,18 @@ export const experienceInfoPlaceholder = [
     id: uuidv4(),
     companyName: "Google",
     positionTitle: "Staff Engineer",
+    resonsibilityInput: "",
     responsibilities: [
-      "Re-engineered googles search algorithm using R in 1 commit and deployed straight into production",
-      "Made impovments to Google Maps algoirthm which saw a 50% reduction in travel distance and a 200% increase in fatality rate",
+      {
+        id: uuidv4(),
+        responsibility:
+          "Re-engineered googles search algorithm using R in 1 commit and deployed straight into production",
+      },
+      {
+        id: uuidv4(),
+        responsibility:
+          "Made impovments to Google Maps algoirthm which saw a 50% reduction in travel distance and a 200% increase in fatality rate",
+      },
     ],
     startDate: "2018-07-22",
     isCurrent: true,
@@ -25,9 +34,18 @@ export const experienceInfoPlaceholder = [
     id: uuidv4(),
     companyName: "Apple",
     positionTitle: "Intern",
+    resonsibilityInput: "",
     responsibilities: [
-      "Re-engineered googles search algorithm using R in 1 commit and deployed straight into production",
-      "Made impovments to Google Maps algoirthm which saw a 50% reduction in travel distance and a 200% increase in fatality rate",
+      {
+        id: uuidv4(),
+        responsibility:
+          "Re-engineered googles search algorithm using R in 1 commit and deployed straight into production",
+      },
+      {
+        id: uuidv4(),
+        responsibility:
+          "Made impovments to Google Maps algoirthm which saw a 50% reduction in travel distance and a 200% increase in fatality rate",
+      },
     ],
     startDate: "2018-07-22",
     isCurrent: false,

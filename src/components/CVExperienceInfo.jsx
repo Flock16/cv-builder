@@ -1,5 +1,4 @@
 import classes from "../styles/CVExperienceInfo.module.css";
-import { v4 as uuidv4 } from "uuid";
 import { formatDate } from "../utils/dateFormatFunction";
 const CVExperienceInfo = ({ experienceInfo }) => {
   return (
@@ -27,9 +26,13 @@ const CVExperienceInfo = ({ experienceInfo }) => {
                 </div>
               </div>
               <ul>
-                {experience.responsibilities.map((responsibility) => (
-                  <li key={uuidv4()}>{responsibility}</li>
-                ))}
+                {experience.responsibilities.map((responsibility) => {
+                  return (
+                    <li key={responsibility.id}>
+                      {responsibility.responsibility}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           );

@@ -12,6 +12,9 @@ const InputContainer = ({
   handleExperienceIsCurrentChange,
   handleAddExperience,
   handleDeleteExperience,
+  handleUpdateResponsibilityInput,
+  handleAddResponsibility,
+  handleDeleteResponsibility,
   educationInfo,
   handleEducationChange,
   handleEducationIsActiveChange,
@@ -35,6 +38,9 @@ const InputContainer = ({
           handleExperienceIsCurrentChange={handleExperienceIsCurrentChange}
           handleAddExperience={handleAddExperience}
           handleDeleteExperience={handleDeleteExperience}
+          handleUpdateResponsibilityInput={handleUpdateResponsibilityInput}
+          handleAddResponsibility={handleAddResponsibility}
+          handleDeleteResponsibility={handleDeleteResponsibility}
         />
       </div>
       <div className={classes.inputSectionPadding}>
