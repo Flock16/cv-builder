@@ -12,6 +12,7 @@ import {
   createDefaultExperienceObject,
   createResponsibility,
   deleteResponsibility,
+  updateResponsibility,
 } from "./utils/createDefaultData.js";
 
 function App() {
@@ -84,6 +85,16 @@ function App() {
     );
   };
 
+  const handleUpdateResponsibility = (id, responsibilityID, value) => {
+    setExperienceInfo(
+      experienceInfo.map((experience) => {
+        if (experience.id === id) {
+          return updateResponsibility(experience, responsibilityID, value);
+        } else return experience;
+      })
+    );
+  };
+
   const handleDeleteResponsibility = (id, responsibilityID) => {
     setExperienceInfo(
       experienceInfo.map((experience) => {
@@ -149,6 +160,7 @@ function App() {
         handleDeleteExperience={handleDeleteExperience}
         handleUpdateResponsibilityInput={handleUpdateResponsibilityInput}
         handleAddResponsibility={handleAddResponsibility}
+        handleUpdateResponsibility={handleUpdateResponsibility}
         handleDeleteResponsibility={handleDeleteResponsibility}
         educationInfo={educationInfo}
         handleEducationChange={handleEducationChange}

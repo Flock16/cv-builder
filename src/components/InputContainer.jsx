@@ -14,6 +14,7 @@ const InputContainer = ({
   handleDeleteExperience,
   handleUpdateResponsibilityInput,
   handleAddResponsibility,
+  handleUpdateResponsibility,
   handleDeleteResponsibility,
   educationInfo,
   handleEducationChange,
@@ -40,6 +41,7 @@ const InputContainer = ({
           handleDeleteExperience={handleDeleteExperience}
           handleUpdateResponsibilityInput={handleUpdateResponsibilityInput}
           handleAddResponsibility={handleAddResponsibility}
+          handleUpdateResponsibility={handleUpdateResponsibility}
           handleDeleteResponsibility={handleDeleteResponsibility}
         />
       </div>

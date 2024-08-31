@@ -50,8 +50,25 @@ export const createResponsibility = (experience) => {
   return { ...experience, responsibilities: newResponsibilitiesArray };
 };
 
+export const updateResponsibility = (experience, responsibilityID, value) => {
+  const newResponsibilitiesArray = experience.responsibilities.map(
+    // (responsibility) => {
+    //   if (responsibility.id === responsibilityID)
+    //     return { ...responsibility, responsibility: value };
+    //   else return responsibility;
+    // }
+    (responsibility) =>
+      responsibility.id === responsibilityID
+        ? { ...responsibility, responsibility: value }
+        : responsibility
+  );
+
+  // console.log(newResponsibilitiesArray);
+  // console.log({ ...experience, responsibilities: newResponsibilitiesArray });
+  return { ...experience, responsibilities: newResponsibilitiesArray };
+};
+
 export const deleteResponsibility = (experience, responsibilityID) => {
-  console.log(experience);
   const newResponsibilitiesArray = experience.responsibilities.filter(
     (responsibility) => {
       return responsibility.id !== responsibilityID;

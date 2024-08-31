@@ -11,6 +11,7 @@ const ExperienceDetails = ({
   handleDeleteExperience,
   handleUpdateResponsibilityInput,
   handleAddResponsibility,
+  handleUpdateResponsibility,
   handleDeleteResponsibility,
 }) => {
   const [dropDown, setDropDown] = useState(false);
@@ -87,8 +88,9 @@ const ExperienceDetails = ({
                           value={responsibility.responsibility}
                           className={classes.responsibilitiesInput}
                           onChange={(event) => {
-                            handleUpdateResponsibilityInput(
+                            handleUpdateResponsibility(
                               experience.id,
+                              responsibility.id,
                               event.target.value
                             );
                           }}
